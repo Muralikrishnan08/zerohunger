@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body{
+            background-color: rgb(255, 0, 255);
+        }
+        h1{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 50px;
+        }
+    </style>
+    <title>Login page</title>
+</head>
+<body><br><br><br><br>
+    <center><h1>LOGIN PAGE</h1><br><br>
+   <blockquote><input type="email" placeholder="Email" id="input"> </blockquote>
+   <blockquote><input type="password" placeholder="Password"></blockquote>
+   <br><br>
+   <center><button onclick="encrypt()">Encrypt</button>
+  <button onclick="decrypt()">Decrypt</button>
+  
+  <p id="output"></p>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+  <script>
+    function encrypt() {
+      var inputText = document.getElementById("input").value;
+      var encryptedText = CryptoJS.AES.encrypt(inputText, "secret passphrase").toString();
+      document.getElementById("output").textContent = encryptedText;
+    }
+    
+    function decrypt() {
+      var encryptedText = document.getElementById("output").textContent;
+      var decryptedText = CryptoJS.AES.decrypt(encryptedText, "secret passphrase").toString(CryptoJS.enc.Utf8);
+      document.getElementById("output").textContent = decryptedText;
+    }
+  </script><br><br><br></center>
+   <center><a href="donate.html"><img src="dlog.jpg" height="65" alt=""></a>  
+    <a href="menu.html"><img src="rlog.jpg" height="65" alt=""></center></a>
+</body>
+</html>

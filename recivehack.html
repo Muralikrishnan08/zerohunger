@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="" href="">
+    <style>
+        body{
+            background-image: url(zerohunger.jpg);
+            background-size: cover;
+        }
+        header {
+             text-align: center;
+             margin-bottom: 30px;
+              font-family: cursive;
+              font-size: 27px;
+              color:red;
+         }
+         
+         h1 {
+             font-size: 31px;
+         }
+         
+         section {
+             border: 1px solid #ccc;
+            
+             padding: 20px;
+             margin-bottom: 30px;
+         }
+         h2 {
+             font-size: 25px;
+             font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+             color:darkblue;
+             font-size: 200%;
+         }
+         
+         form {
+             display: 2px;
+             flex-direction: column;
+         }
+         
+         label {
+             display: block;
+             margin-bottom:auto;
+         }
+         
+         form{
+             font-family: 'Courier New', Courier, monospace;
+         }
+         label{
+           font-family:Arial, Helvetica, sans-serif;
+         }
+         button{
+             position: relative;
+             width: 200px;
+             padding: 15px;
+             text-align: center;
+             margin: 20px 10px;   ;
+             font-weight: bold;
+             border: 2px solid rgb(128, 120, 233);
+             background: transparent;
+             color: #fff;
+             cursor: pointer;
+             overflow: hidden;
+             text-transform: uppercase;
+             color: black;
+ 
+         }
+         span{
+             background: rgb(80, 212, 75);
+             height: 100%;
+             width: 0;
+             position: absolute;
+             left: 0;
+             bottom: 0;
+             z-index: -1;
+             transition: 0.5s;
+         }
+         button:hover span{
+             width: 100%;
+         }
+         #pick{
+             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+             font-size: 22px;
+         }
+         #food{
+             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+             font-size: 22px;
+             color:black;  
+         }
+     </style> 
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recive</title>
+</head>
+<body>
+    <header>
+        <h1>Waste Food Management System Reciver <br> and <br> Reciver System</h1>
+    </header>
+        <blockquote><h2>RECIVER SECTION</h2><br>
+            <form id="donor-form" required="">
+                <label for="donor-name" size=></label>
+                <input type="text" id="donor-name" name="donor-name" size="22" required placeholder="NAME">
+                <br><br>
+                <input type="text" name="hotel" id="hotel" placeholder="HOTEL NAME (optional)" size="22">
+                <br><br>
+                <label for="donor-address"></label>
+                <input type="text" id="donor-address" name="donor-address" size="22" required placeholder="ADDRESS">
+                <br><br>
+
+                <label for="donor-name" required=""></label>
+                <input type="tel" id="donor-contact" size="22" name="donor-contact" required placeholder="MOBILE NO">
+                <br><br>
+
+                <label for="donor-quantity"></label>
+                <input type="text" id="donor-quantity" size="22" name="donor-quantity" required placeholder="QUANTITY">
+                <br><br>
+              
+
+                <label id="food">TYPE OF FOOD :</label><br>
+               <select name="FOOD" id="FOOD">
+                <option value="select">SELECT</option>
+                <option value="VEG">VEG</option>
+                <option value="NON VEG">NON-VEG</option>
+               </select><br><br>
+                <a href="reciverlast.html"><button type="button"><span></span>Recive</button></a>
+            </form></blockquote>
+</body>
+</html>
